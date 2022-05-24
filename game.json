@@ -2462,7 +2462,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4131666481017994,
+        "zoomFactor": 0.37416664712428327,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2597,7 +2597,7 @@
           "initialVariables": []
         },
         {
-          "angle": 11.239604949951172,
+          "angle": 3.5526771545410156,
           "customSize": true,
           "height": 79,
           "layer": "",
@@ -2925,8 +2925,8 @@
           "name": "Renegade",
           "persistentUuid": "7874a0f7-98e8-4260-9c9d-d8e17e2d2d72",
           "width": 35,
-          "x": 1111,
-          "y": 811,
+          "x": 1044,
+          "y": 776,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
