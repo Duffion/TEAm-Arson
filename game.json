@@ -2488,7 +2488,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3600000000000001,
+        "zoomFactor": 0.3350000000000001,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2520,7 +2520,7 @@
           "persistentUuid": "f49a96ea-baf6-4568-bb2d-f26186b7f1fb",
           "width": 2282,
           "x": -1,
-          "y": -3,
+          "y": -1,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -3111,8 +3111,8 @@
           "name": "BrownBox",
           "persistentUuid": "c9467fd8-456c-402c-be88-7e64ba8188c0",
           "width": 1176,
-          "x": 359,
-          "y": 2,
+          "x": 8,
+          "y": 4,
           "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
@@ -3127,8 +3127,8 @@
           "name": "NewText",
           "persistentUuid": "e34f9418-55b0-4f38-967e-5d4c118da856",
           "width": 914,
-          "x": 500,
-          "y": 37,
+          "x": 126,
+          "y": 27,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -3146,6 +3146,38 @@
           "x": 3340.302734375,
           "y": 783.553955078125,
           "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 257,
+          "layer": "",
+          "locked": false,
+          "name": "BrownBox2",
+          "persistentUuid": "c82b1d24-fbe0-43d8-91db-1111fd6b600c",
+          "width": 687,
+          "x": 1395,
+          "y": -486,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 379,
+          "layer": "",
+          "locked": false,
+          "name": "NewText2",
+          "persistentUuid": "1aa1a499-cfd0-46cd-aa1b-b9719c255d32",
+          "width": 573,
+          "x": 795,
+          "y": -411,
+          "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7080,6 +7112,105 @@
               ]
             }
           ]
+        },
+        {
+          "name": "BrownBox2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "button",
+              "type": "MouseHelper::button"
+            }
+          ],
+          "animations": [
+            {
+              "name": "No Shadow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Brown Box_No Shadow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Shadow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Brown Box_Shadow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "NewText2",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "button",
+              "type": "MouseHelper::button"
+            }
+          ],
+          "string": "Congrats, you have passed. Click here to continue!",
+          "font": "",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -7175,14 +7306,80 @@
                 "2000"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownBox2",
+                "=",
+                "1192",
+                "=",
+                "13"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "NewText2",
+                "=",
+                "1265",
+                "=",
+                "28"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseHelper::button::isClicked"
+              },
+              "parameters": [
+                "BrownBox2",
+                "button",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseHelper::button::isClicked"
+              },
+              "parameters": [
+                "NewText2",
+                "button",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"sceneThreeHouseOnFire\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ],
